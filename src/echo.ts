@@ -1,5 +1,6 @@
 import { Channel, PresenceChannel } from './channel';
 import { PusherConnector, SocketIoConnector, NullConnector } from './connector';
+import EchoOption from './EchoOption';
 
 /**
  * This class is the primary API for interacting with broadcasting.
@@ -13,12 +14,12 @@ export default class Echo {
     /**
      * The Echo options.
      */
-    options: any;
+    options: EchoOption;
 
     /**
      * Create a new class instance.
      */
-    constructor(options: any) {
+    constructor(options: EchoOption) {
         this.options = options;
         this.connect();
 
